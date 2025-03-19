@@ -532,3 +532,25 @@ LIMIT 10
 
 
 ```
+
+## **Learning Outcomes**
+
+Through this project, I was able to:
+- Develop and structure a normalized database schema.
+- Prepare and clean real-world datasets for effective analysis.
+- Apply advanced SQL methods, such as window functions, subqueries, and joins.
+- Perform comprehensive business analysis using SQL.
+- Enhance query efficiency and manage large datasets effectively.
+
+---
+
+## **Conclusion**
+
+This advanced SQL project showcases my ability to address real-world e-commerce challenges through structured queries. From enhancing customer retention to optimizing inventory and logistics, the analysis offers valuable insights into operational hurdles and their solutions.
+
+Completing this project has deepened my understanding of how SQL can be leveraged to solve complex data problems and support data-driven business decisions.
+
+---
+
+### **Entity Relationship Diagram (ERD)**
+
