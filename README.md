@@ -1,4 +1,5 @@
 # amazon_project_SQL
+![Amazon Logo](https://github.com/floxareland/amazon_project_SQL/blob/main/amazon-6536326_1280.webp)
 
 # **Amazon Sales Analysis Project**
 
