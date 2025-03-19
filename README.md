@@ -107,3 +107,63 @@ CONSTRAINT inventory_fk_products FOREIGN KEY(product_id) REFERENCES products(pro
 ALTER TABLE sellers
 ALTER COLUMN origin TYPE VARCHAR(10);
 ```
+## **Task: Data Cleaning**
+
+I cleaned the dataset by:
+- **Removing duplicates**: Duplicates in the customer and order tables were identified and removed.
+- **Handling missing values**: Null values in critical fields (e.g., customer address, payment status) were either filled with default values or handled using appropriate methods.
+
+---
+
+## **Handling Null Values**
+
+Null values were handled based on their context:
+- **Customer addresses**: Missing addresses were assigned default placeholder values.
+- **Payment statuses**: Orders with null payment statuses were categorized as “Pending.”
+- **Shipping information**: Null return dates were left as is, as not all shipments are returned.
+
+---
+
+## **Objective**
+
+The primary objective of this project is to showcase SQL proficiency through complex queries that address real-world e-commerce business challenges. The analysis covers various aspects of e-commerce operations, including:
+- Customer behavior
+- Sales trends
+- Inventory management
+- Payment and shipping analysis
+- Forecasting and product performance
+  
+
+## **Identifying Business Problems**
+
+Key business problems identified:
+1. Low product availability due to inconsistent restocking.
+2. High return rates for specific product categories.
+3. Significant delays in shipments and inconsistencies in delivery times.
+4. High customer acquisition costs with a low customer retention rate.
+
+---
+
+## **Solving Business Problems**
+
+### Solutions Implemented:
+1. Find top 10 products by total sales value. Include product name, product name and total sales values.
+```sql
+ALTER TABLE order_items
+ADD COLUMN total_sale FLOAT;
+UPDATE order_items 
+SET total_sale=quantity * price_per_unit;
+
+SELECT oi.product_id,
+p.product_name,
+SUM(oi.total_sale) AS total_sale
+FROM orders AS o
+JOIN order_items AS oi
+ON oi.order_id=o.order_id
+JOIN products AS p
+ON p.product_id=oi.product_id
+GROUP BY 1,2
+ORDER BY total_sale DESC
+LIMIT 10;
+
+```
