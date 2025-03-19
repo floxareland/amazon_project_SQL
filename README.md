@@ -553,8 +553,7 @@ Completing this project has deepened my understanding of how SQL can be leverage
 ---
 
 ### **Entity Relationship Diagram (ERD)**
-![ERD](https://github.com/najirh/amazon_usa_project5/blob/main/erd.png)
+![ERD](https://github.com/floxareland/amazon_project_SQL/blob/main/Updated%20ERD%20-%20Amazon.png)
 
 ---
 
----
